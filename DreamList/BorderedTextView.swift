@@ -10,7 +10,7 @@ import UIKit
 
 private var borderedViewKey = false
 
-@IBDesignable extension UIView {
+extension UIView {
 
     @IBInspectable var borderedView: Bool{
         get{

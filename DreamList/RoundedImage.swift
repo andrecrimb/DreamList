@@ -10,7 +10,7 @@ import UIKit
 
 private var roudedImageKey = false
 
-@IBDesignable extension UIImageView {
+extension UIImageView {
 
     @IBInspectable var roudedImage: Bool{
         get{

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C1D94C7CF3B7AE13EA84402E23F89BCAC2A5F8D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "261404893310EC1BAED984EFCA9367605CC71089" : 9223372036854775807,
+    "C1D94C7CF3B7AE13EA84402E23F89BCAC2A5F8D6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "81ED447A-9ADC-4D1D-AE8E-3F5542AAEE96",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "261404893310EC1BAED984EFCA9367605CC71089" : "..",
+    "C1D94C7CF3B7AE13EA84402E23F89BCAC2A5F8D6" : "DreamList\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DreamList",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DreamList.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:KennedySDias\/EMR-for-NGO.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "261404893310EC1BAED984EFCA9367605CC71089"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/andrerosa189\/DreamList.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C1D94C7CF3B7AE13EA84402E23F89BCAC2A5F8D6"
+    }
+  ]
+}

@@ -17,6 +17,7 @@ class ItemDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     @IBOutlet weak var priceField: UITextField!
     
     var stores = [Store]()
+    var itemToEdit: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,12 @@ class ItemDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
 //        
 //        ad?.saveContext()
         getStores()
+        
+        if itemToEdit != nil{
+            self.title = "Edit Dream"
+            loadItemData()
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -62,6 +69,7 @@ class ItemDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         //
     }
     
+    //busca no banco local todas as lojas salvas
     func getStores(){
         let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
         
@@ -73,5 +81,61 @@ class ItemDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
             //
         }
     }
+    
+    @IBAction func savePress(_ sender: UIButton) {
+        
+        var item: Item!
+        
+        if itemToEdit == nil{
+            item = Item(context: context!)
+        } else {
+            item = itemToEdit
+        }
+        
+        if let title = titleField.text{
+            item.title = title
+        }
+        
+        if let price = priceField.text{
+            item.price = (price as NSString).doubleValue
+        }
+        
+        if let details = detailField.text{
+            item.details = details
+        }
+        
+        item.toStore = stores[storePicker.selectedRow(inComponent: 0)] //pega o valor do picker
+        
+        ad?.saveContext()
+        
+        //dismiss usa quando é popouver
+        //dismiss(animated: true, completion: nil)
+        // esse usa uqnado é navegacao normal
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
+    func loadItemData(){
+        if let item = itemToEdit{
+            titleField.text = item.title
+            priceField.text = "\(item.price)"
+            detailField.text = item.details
+            
+            if let store = item.toStore{
+                var index = 0
+                repeat{
+                    let s = stores[index]
+                    if s.name == store.name{
+                        //seta o valor nno pickerview
+                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        break
+                    }
+                    index += 1
+                } while (index < stores.count)
+            }
+            
+        }
+    }
+    
     
 }

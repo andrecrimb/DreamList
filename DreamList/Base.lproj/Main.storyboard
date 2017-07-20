@@ -234,9 +234,8 @@
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-XG-OLl">
                                                 <rect key="frame" x="0.0" y="116" width="343" height="140"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bao-I0-3vr">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" text="Some description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bao-I0-3vr">
                                                         <rect key="frame" x="12" y="12" width="319" height="116"/>
-                                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         <userDefinedRuntimeAttributes>
@@ -305,7 +304,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Dream" id="DnX-Ws-WXz">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="YD7-FY-0NB"/>
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="bet-xc-NSK"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="bet-xc-NSK">
+                            <connections>
+                                <action selector="savePress:" destination="w84-DO-TdU" id="TVT-np-Ybz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailField" destination="bao-I0-3vr" id="yjx-7n-tsM"/>
@@ -323,7 +326,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qkT-4k-EEr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MeT-IJ-ALB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MeT-IJ-ALB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -346,6 +349,6 @@
         <image name="picture" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k5U-2b-k87"/>
+        <segue reference="4cy-JV-qg5"/>
     </inferredMetricsTieBreakers>
 </document>

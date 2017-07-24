@@ -181,7 +181,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roudedImage" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG5-VA-aYZ">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG5-VA-aYZ">
                                                                 <rect key="frame" x="0.0" y="0.5" width="100" height="100"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="100" id="jA1-BU-QV2"/>

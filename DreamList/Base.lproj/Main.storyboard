@@ -30,6 +30,9 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" red="0.28143450619999999" green="0.66509884600000002" blue="0.82666116950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="PI3-hb-siw"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ymD-7N-cmo">
                                 <rect key="frame" x="0.0" y="124" width="375" height="543"/>
@@ -181,12 +184,15 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roudedImage" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG5-VA-aYZ">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG5-VA-aYZ">
                                                                 <rect key="frame" x="0.0" y="0.5" width="100" height="100"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="100" id="jA1-BU-QV2"/>
                                                                     <constraint firstAttribute="width" constant="100" id="pcZ-EZ-nvj"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <action selector="addImage:" destination="w84-DO-TdU" eventType="touchUpInside" id="xWa-zQ-v0e"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,6 +293,9 @@
                                         <state key="normal" title="Delete">
                                             <color key="titleColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="deletePress:" destination="w84-DO-TdU" eventType="touchUpInside" id="E3H-HG-ZFC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -314,6 +323,7 @@
                         <outlet property="detailField" destination="bao-I0-3vr" id="yjx-7n-tsM"/>
                         <outlet property="priceField" destination="q9B-YN-Dw8" id="NlL-Mo-nhv"/>
                         <outlet property="storePicker" destination="BqL-Du-P0p" id="NWn-nB-en0"/>
+                        <outlet property="thumbImage" destination="xg7-sm-bub" id="4Oz-EZ-DhL"/>
                         <outlet property="titleField" destination="kzn-b4-8BL" id="Ufc-ph-vaT"/>
                     </connections>
                 </viewController>
